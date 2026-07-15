@@ -1,12 +1,10 @@
 #check prime number
 n = int(input())
-
-if n <= 1:
-    print("not a prime")
+c=0
+for i in range(1,n+1):
+    if n%i==0:
+        c=c+1
+if c<=2:
+    print("prime")
 else:
-    for i in range(2, n):
-        if n % i == 0:
-            print("not a prime")
-            break
-    else:
-        print("prime")
+    print("not a prime")
